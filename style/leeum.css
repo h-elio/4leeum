@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh !important;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.wrap {
+  width: 100%;
+}
+
+#header {
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  width: 24px;
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin-bottom: 9px;
+}
+
+#logo img {
+  width: 80px;
+}
+
+.util {
+  display: flex;
+}
+.util a {
+  margin-left: 20px;
+}
+
+.nav {
+  font-size: 12px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 295px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 60px 40px;
+  left: -315px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  background: #fff;
+  overflow: auto;
+}
+.nav.on {
+  left: 0;
+}
+.nav .menu-list > li:first-child {
+  margin-bottom: 40px;
+}
+.nav .menu-list > li:nth-child(2),
+.nav .menu-list > li:nth-child(3) {
+  margin-bottom: 25px;
+}
+.nav .menu-list > li:nth-child(4),
+.nav .menu-list > li:nth-child(5) {
+  margin-bottom: 50px;
+}
+.nav .dep2 {
+  padding: 20px 0 15px;
+  font-size: 11px;
+  font-weight: normal;
+}
+.nav .dep2 li {
+  padding-bottom: 10px;
+}
+.nav .dep2 .dep3 {
+  padding-left: 5px;
+}
+.nav .dep2 .dep3 li:first-child {
+  padding-top: 10px;
+}
+.nav .close-btn {
+  width: 18px;
+  height: 18px;
+  background: url("../leeum-img/icon_close.svg") no-repeat 50% 50%;
+  background-size: 18px;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.section-title {
+  padding: 80px 0 20px;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+#main section {
+  text-align: center;
+}
+#main section .img-box {
+  position: relative;
+}
+#main section .img-box .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#main section .img-box:hover .hover-img {
+  opacity: 1;
+  transition: 0.4s;
+}
+#main section > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section > ul > li {
+  width: 100%;
+}
+section > ul > li:first-child .img-box {
+  margin-top: 0;
+}
+section > ul > li > .img-box {
+  margin-top: 70px;
+}
+
+section.main-banner .banner {
+  display: none;
+}
+
+section.artist-section .artist-name {
+  font-size: 11px;
+  padding-top: 5px;
+}
+
+.m-padding {
+  padding: 0 15px;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 100px;
+  padding-bottom: 95px;
+  font-size: 10px;
+  position: relative;
+}
+#footer .footer-menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+#footer .footer-menu ul {
+  display: flex;
+}
+#footer .footer-menu ul li {
+  margin-left: 10px;
+  position: relative;
+}
+#footer .footer-menu ul:first-child li::after {
+  content: "";
+  background-color: #000;
+  height: 0.5px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3px;
+  position: absolute;
+}
+#footer .footer-menu ul:nth-child(2) li::after {
+  content: "";
+  background-color: #000;
+  height: 0.5px;
+  width: 0;
+  bottom: -3px;
+  left: 0;
+  position: absolute;
+}
+#footer .footer-menu ul:nth-child(2) li:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
+#footer .footer-menu p {
+  position: absolute;
+  bottom: 20px;
+}
+#footer .footer-info {
+  margin-bottom: 15px;
+}
+#footer .footer-info span {
+  display: inline-block;
+  padding-right: 10px;
+}
+#footer .footer-sns {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 52px;
+}
+#footer .footer-sns ul {
+  display: flex;
+}
+#footer .footer-sns ul li {
+  padding-right: 15px;
+}
+#footer .footer-sns img {
+  width: 17px;
+}
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.dep2 {
+  display: none;
+}
+
+.artist-section ul > li:nth-child(7),
+.artist-section ul > li:nth-child(8),
+.artist-section ul > li:nth-child(9),
+.artist-section ul > li:nth-child(10),
+.artist-section ul > li:nth-child(11),
+.artist-section ul > li:nth-child(12),
+section > ul > li:nth-child(2),
+section > ul > li:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .artist-section ul > li:nth-child(7),
+.artist-section ul > li:nth-child(8),
+.artist-section ul > li:nth-child(9),
+.artist-section ul > li:nth-child(10),
+.artist-section ul > li:nth-child(11),
+.artist-section ul > li:nth-child(12),
+section > ul > li:nth-child(2),
+section > ul > li:nth-child(3) {
+    display: block;
+  }
+
+  .m-padding {
+    padding: 0;
+  }
+
+  section.artist-section ul li {
+    width: 31.5%;
+  }
+  section.artist-section ul .artist-name {
+    font-size: 11px;
+    padding-top: 5px;
+    margin-bottom: 90px;
+  }
+
+  section > ul > li {
+    width: 31.5%;
+  }
+  section > ul > li > .img-box {
+    margin: 0px;
+  }
+  section > ul > li:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  section.main-banner .mobile-banner {
+    display: none;
+  }
+  section.main-banner .banner {
+    display: block;
+  }
+
+  section > ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #footer {
+    padding: 30px 15px;
+  }
+  #footer .footer-menu {
+    justify-content: flex-start;
+  }
+  #footer .footer-menu p {
+    top: 30px;
+    left: 400px;
+  }
+  #footer .footer-info {
+    margin-bottom: 15px;
+  }
+  #footer .footer-info span {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  #footer .footer-sns {
+    position: absolute;
+    right: 1000px;
+    bottom: 16px;
+  }
+  #footer .footer-sns ul {
+    display: flex;
+  }
+  #footer .footer-sns ul li {
+    padding-right: 15px;
+  }
+  #footer .footer-sns img {
+    width: 17px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .wrap {
+    padding: 0 40px;
+  }
+
+  #header {
+    align-items: flex-start;
+    padding: 60px 0 50px;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  #logo img {
+    height: 210px;
+    width: auto;
+    padding-left: 275px;
+  }
+
+  .nav {
+    left: 0;
+    position: fixed;
+    height: auto;
+    box-shadow: none;
+    width: 275px;
+  }
+  .nav .close-btn {
+    display: none;
+  }
+
+  main {
+    padding-left: 275px;
+  }
+
+  .section-title {
+    padding: 90px 0 20px;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: left;
+  }
+}/*# sourceMappingURL=leeum.css.map */
