@@ -99,6 +99,25 @@ img {
 .nav .menu-list > li:nth-child(5) {
   margin-bottom: 50px;
 }
+.nav .menu-list .material {
+  position: relative;
+}
+.nav .menu-list .material::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 120px;
+  width: 13px;
+  height: 10px;
+  background: url(../leeum-img/icon_arrow_down.svg) no-repeat;
+  transform: scaleY(-1);
+}
+.nav .menu-list .material.tab-on::after {
+  transform: none;
+}
+.nav .tab-list.tab-on .dep2 {
+  display: block;
+}
 .nav .dep2 {
   display: none;
   padding: 20px 0 15px;
@@ -108,8 +127,12 @@ img {
 .nav .dep2 li {
   padding-bottom: 10px;
 }
+.nav .dep2 li.tab-on .dep3 {
+  display: block;
+}
 .nav .dep2 .dep3 {
   padding-left: 5px;
+  display: none;
 }
 .nav .dep2 .dep3 li:first-child {
   padding-top: 10px;
@@ -130,6 +153,7 @@ img {
   padding: 80px 0 20px;
   font-weight: 400;
   font-size: 22px;
+  position: relative;
 }
 
 #main section {
@@ -261,6 +285,37 @@ section > ul > li:nth-child(3) {
   display: none;
 }
 
+.see-more {
+  text-align: right;
+  display: none;
+}
+.see-more span {
+  border: 1px solid #000;
+  font-size: 12px;
+  padding: 14px 45px;
+}
+
+button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  border: none;
+  bottom: -400px;
+  cursor: pointer;
+  z-index: 39;
+}
+button.nextBtn {
+  right: 20px;
+  background: url("../leeum-img/icon_next.svg") no-repeat;
+  background-size: contain;
+}
+button.prevBtn {
+  left: 20px;
+  background: url("../leeum-img/icon_prev.svg") no-repeat;
+  background-size: contain;
+}
+
 @media screen and (min-width: 768px) {
   .artist-section ul > li:nth-child(7),
 .artist-section ul > li:nth-child(8),
@@ -269,12 +324,38 @@ section > ul > li:nth-child(3) {
 .artist-section ul > li:nth-child(11),
 .artist-section ul > li:nth-child(12),
 section > ul > li:nth-child(2),
-section > ul > li:nth-child(3) {
+section > ul > li:nth-child(3),
+button {
     display: block;
+  }
+
+  button.nextBtn {
+    right: 0;
+    bottom: 20px;
+  }
+
+  button.prevBtn {
+    display: none;
   }
 
   .nav {
     z-index: 9090;
+  }
+  .nav li > a {
+    position: relative;
+  }
+  .nav li > a::after {
+    content: "";
+    background-color: #000;
+    height: 0.5px;
+    width: 0;
+    bottom: -3px;
+    left: 0;
+    position: absolute;
+  }
+  .nav li > a:hover::after {
+    width: 100%;
+    transition: width 0.5s;
   }
 
   .m-padding {
@@ -352,6 +433,10 @@ section > ul > li:nth-child(3) {
   }
 }
 @media screen and (min-width: 960px) {
+  .see-more {
+    display: block;
+  }
+
   .nav {
     font-weight: 400;
   }
@@ -400,5 +485,13 @@ section > ul > li:nth-child(3) {
     font-weight: 400;
     font-size: 22px;
     text-align: left;
+  }
+
+  #footer {
+    margin-top: 200px;
+    padding-left: 275px;
+  }
+  #footer p {
+    left: 670px !important;
   }
 }/*# sourceMappingURL=leeum.css.map */
